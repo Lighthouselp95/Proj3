@@ -54,9 +54,9 @@ class Object {
     update() {
             this.center[0] = this.center[0] + this.velocity[0]*this.interval;
             this.center[1] = this.center[1] + this.velocity[1]*this.interval;
-            if (this.center[0]<0) {this.center[0]=-this.center[0]; this.velocity[0]=this.velocity[0]};
-            if (this.center[0]>785) {this.center[0]=1570-this.center[0]; this.velocity[0]=this.velocity[0]};
-            if (this.center[1]<0) {this.center[1]=-this.center[1]; this.velocity[1]=this.velocity[1]};
+            if (this.center[0]<0) {this.center[0]=-this.center[0]; this.velocity[0]=-this.velocity[0]};
+            if (this.center[0]>785) {this.center[0]=1570-this.center[0]; this.velocity[0]=-this.velocity[0]};
+            if (this.center[1]<0) {this.center[1]=-this.center[1]; this.velocity[1]=-this.velocity[1]};
             if (this.center[1]>385) {this.center[1]=770-this.center[1]; this.velocity[1]=this.velocity[1]};
             this.dom.style.left = this.center[0] +"px";
             this.dom.style.top = this.center[1] +"px";
